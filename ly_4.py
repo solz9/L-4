@@ -21,6 +21,6 @@ if st.button('Kết quả'):
             'Điểm cộng': a[3]
         })
     st.checkbox("Use container width", value=False, key="use_container_width")
-    st.dataframe(df, use_container_width=st.session_state.use_container_width)
+    st.dataframe(df1)
 
 #     st.write({'Họ và tên': Names.to_string(), 'HS1': HS1.to_string(), 'BT01 Đúng/Sai': BTDDS.to_string(), 'BT02 Moment':BTMM.to_string(), 'Điểm cộng': Bonus.to_string()})
