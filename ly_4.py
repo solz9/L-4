@@ -11,5 +11,5 @@ if st.button('Kết quả'):
     BTDDS = df[df['Họ và tên'] == y]['BT01 Đúng/Sai']
     BTMM = df[df['Họ và tên'] == y]['BT02 Moment']
     Bonus = df[df['Họ và tên'] == y]['Điểm cộng']
-    st.write(np.array(Names, HS1, BTDDS, BTMM, Bonus))
+    st.write(np.array([Names, HS1, BTDDS, BTMM, Bonus]))
 
