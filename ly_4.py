@@ -1,5 +1,6 @@
 import pickle
 import streamlit as st
+pip install openpyxl
 import pandas as pd
 import numpy as np
 st.title('KẾT QUẢ HỌC TẬP LỚP LÝ 4')
