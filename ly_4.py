@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-y = st.number_input('Nhập họ và tên')
+y = st.text_input('Nhập họ và tên')
 st.title('KẾT QUẢ HỌC TẬP LỚP LÝ 4')
 if st.button('Kết quả'):
     df = pickle.load(open('ds_ly4', 'rb'))
