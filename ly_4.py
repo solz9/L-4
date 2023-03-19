@@ -5,7 +5,7 @@ import numpy as np
 st.title('KẾT QUẢ HỌC TẬP LỚP LÝ 4')
 y = st.text_input('Nhập họ và tên')
 if st.button('Kết quả'):
-    df = pd.read_excel('ds_ly4')
+    df = pd.read_excel('DS_10Ly4.xlsx')
 #     st.dataframe(df)
 #     df = pickle.load(open('ds_ly4 (1)', 'rb'))
 #     df.drop(columns=index)
