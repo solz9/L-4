@@ -16,10 +16,10 @@ if st.button('Kết quả'):
     df1 = pd.DataFrame(
         {
             "Họ và tên": a[0],
-            "HS1": a[1],
-            'BT01 Đúng/Sai':a[2],
-            'BT02 Moment': a[3],
-            'Điểm cộng': a[4]
+            "HS1": round(a[1], 1),
+            'BT01 Đúng/Sai':round(a[2], 1),
+            'BT02 Moment': round(a[3], 1),
+            'Điểm cộng': round(a[4], 1)
         }
     )
     
