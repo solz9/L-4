@@ -8,7 +8,7 @@ if st.button('Kết quả'):
 #     df = pd.read_excel('ds_ly4')
 #     st.dataframe(df)
     df = pickle.load(open('ds_ly4', 'rb'))
-    df.drop(columns=index)
+#     df.drop(columns=index)
     Names = df[df['Họ và tên'] == y]['Họ và tên']
     HS1 = df[df['Họ và tên'] == y]['HS1']
     BTDDS = df[df['Họ và tên'] == y]['BT01 Đúng/Sai']
