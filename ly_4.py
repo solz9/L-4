@@ -11,6 +11,5 @@ if st.button('Kết quả'):
     BTDDS = df[df['Họ và tên'] == y]['BT01 Đúng/Sai']
     BTMM = df[df['Họ và tên'] == y]['BT02 Moment']
     Bonus = df[df['Họ và tên'] == y]['Điểm cộng']
-    a = [Names, HS1, BTDDS, BTMM, Bonus]
-    st.write(pd.to_excel(a))
+    st.write(np.array(Names, HS1, BTDDS, BTMM, Bonus))
 
