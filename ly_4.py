@@ -12,6 +12,8 @@ if st.button('Kết quả'):
     BTMM = df[df['Họ và tên'] == y]['BT02 Moment']
     Bonus = df[df['Họ và tên'] == y]['Điểm cộng']
     a = np.array([Names, HS1, BTDDS, BTMM, Bonus])
+    a = np.delete(a, 0, 0)
+    a = np.delete(a, 0, 1)
     st.write(a.T)
 # "name": ["An", "Bình", "Châu", "Nam", "Mai"], 
 #     "grade": [7, 6, 5, 7, 9], 
