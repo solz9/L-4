@@ -20,7 +20,8 @@ if st.button('Kết quả'):
             'BT01 Đúng/Sai':a[2],
             'BT02 Moment': a[3],
             'Điểm cộng': a[4]
-        })
+        }
+    )
     st.checkbox("Use container width", value=False, key="use_container_width")
     st.dataframe(df1)
 
