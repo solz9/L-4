@@ -15,7 +15,7 @@ if st.button('Kết quả'):
                        'HS1': [HS1], 
                        'BT01 Đúng/Sai':[BTDDS], 
                        'BT02 Moment': [BTMM],
-                       'Điểm cộng': [Bonus]}]))
+                       'Điểm cộng': [Bonus]}]).T)
 
 # "name": ["An", "Bình", "Châu", "Nam", "Mai"], 
 #     "grade": [7, 6, 5, 7, 9], 
