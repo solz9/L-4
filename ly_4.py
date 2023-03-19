@@ -7,7 +7,7 @@ y = st.text_input('Nhập họ và tên')
 if st.button('Kết quả'):
     df = pickle.load(open('ds_ly4', 'rb'))
     Names = df[df['Họ và tên'] == y]['Họ và tên'[1]]
-    HS1 = df[df['Họ và tên'] == y]['HS1'][1]
+    HS1 = df[df['Họ và tên'] == y]['HS1'[1]]
     BTDDS = df[df['Họ và tên'] == y]['BT01 Đúng/Sai'[1]]
     BTMM = df[df['Họ và tên'] == y]['BT02 Moment'[1]]
     Bonus = df[df['Họ và tên'] == y]['Điểm cộng'[1]]
