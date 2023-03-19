@@ -1,17 +1,14 @@
+import pickle
 import streamlit as st
-
-col1, col2, col3 = st.columns(3)
-
-with col1:
-    st.header("A cat")
-    st.image("https://static.streamlit.io/examples/cat.jpg")
-
-with col2:
-    st.header("A dog")
-    st.image("https://static.streamlit.io/examples/dog.jpg")
-
-with col3:
-    st.header("An owl")
-    st.image("https://static.streamlit.io/examples/owl.jpg")
-
-st.text('This text is outside of column')
+import pandas as pd
+import numpy as np
+st.title('KẾT QUẢ HỌC TẬP LỚP LÝ 4')
+y = st.text_input('Nhập họ và tên')
+if st.button('Kết quả'):
+    df = pickle.load(open('ds_ly4', 'rb'))
+    Names = df[df['Họ và tên'] == y]['Họ và tên']
+    HS1 = df[df['Họ và tên'] == y]['HS1']
+    BTDDS = df[df['Họ và tên'] == y]['BT01 Đúng/Sai']
+    BTMM = df[df['Họ và tên'] == y]['BT02 Moment']
+    Bonus = df[df['Họ và tên'] == y]['Điểm cộng']   
+    st.write(Names, HS1, BTDDS, BTMM, Bonus)
