@@ -13,7 +13,7 @@ if st.button('Kết quả'):
     BTMM = df[df['Họ và tên'] == y]['BT02 Moment']
     Bonus = df[df['Họ và tên'] == y]['Điểm cộng']
     a = np.array([Names, HS1, BTDDS, BTMM, Bonus])
-    pd.DataFrame(
+    df1 = pd.DataFrame(
         {
             "Họ và tên": a[0],
             "HS1": a[1],
@@ -21,6 +21,6 @@ if st.button('Kết quả'):
             'Điểm cộng': a[3]
         })
     st.checkbox("Use container width", value=False, key="use_container_width")
-    st.dataframe(df, use_container_width=st.session_state.use_container_width)
+    st.dataframe(df1, use_container_width=st.session_state.use_container_width)
 
 #     st.write({'Họ và tên': Names.to_string(), 'HS1': HS1.to_string(), 'BT01 Đúng/Sai': BTDDS.to_string(), 'BT02 Moment':BTMM.to_string(), 'Điểm cộng': Bonus.to_string()})
