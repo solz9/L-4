@@ -6,7 +6,7 @@ st.title('KẾT QUẢ HỌC TẬP LỚP LÝ 4')
 y = st.text_input('Nhập họ và tên')
 if st.button('Kết quả'):
     df = pickle.load(open('ds_ly4', 'rb'))
-    df.drop(columns=index)
+#     df.drop(columns=index)
     Names = df[df['Họ và tên'] == y]['Họ và tên']
     HS1 = df[df['Họ và tên'] == y]['HS1']
     BTDDS = df[df['Họ và tên'] == y]['BT01 Đúng/Sai']
@@ -14,8 +14,9 @@ if st.button('Kết quả'):
     Bonus = df[df['Họ và tên'] == y]['Điểm cộng']
     a = np.array([Names, HS1, BTDDS, BTMM, Bonus])
     st.write({'Họ và tên': Names.to_string(), 'HS1': HS1.to_string(), 'BT01 Đúng/Sai': BTDDS.to_string(), 'BT02 Moment':BTMM.to_string(), 'Điểm cộng': Bonus.to_string()})
-df = pd.DataFrame(a.T,
+    df1 = pd.DataFrame(a.T,
                   rows=('Họ và tên','HS1', 'BT01 Đúng/Sai', 'Điểm cộng'))
+    st.table(df1)
     # "name": ["An", "Bình", "Châu", "Nam", "Mai"], 
 #     "grade": [7, 6, 5, 7, 9], 
 #     "class": ["10A1", "10A2", "10A3", "10B", "10C"],
