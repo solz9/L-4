@@ -5,10 +5,10 @@ import numpy as np
 st.title('KẾT QUẢ HỌC TẬP LỚP LÝ 4')
 y = st.text_input('Nhập họ và tên')
 if st.button('Kết quả'):
-    df = pd.read_excel('ds_ly4')
-    st.dataframe(df)
-#     df = pickle.load(open('ds_ly4', 'rb'))
-#     df.drop(columns=index)
+#     df = pd.read_excel('ds_ly4')
+#     st.dataframe(df)
+    df = pickle.load(open('ds_ly4', 'rb'))
+    df.drop(columns=index)
     Names = df[df['Họ và tên'] == y]['Họ và tên']
     HS1 = df[df['Họ và tên'] == y]['HS1']
     BTDDS = df[df['Họ và tên'] == y]['BT01 Đúng/Sai']
