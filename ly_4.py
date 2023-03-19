@@ -14,8 +14,8 @@ if st.button('Kết quả'):
     Bonus = df[df['Họ và tên'] == y]['Điểm cộng']
     a = np.array([Names, HS1, BTDDS, BTMM, Bonus])
     st.write({'Họ và tên': Names.to_string(), 'HS1': HS1.to_string(), 'BT01 Đúng/Sai': BTDDS.to_string(), 'BT02 Moment':BTMM.to_string(), 'Điểm cộng': Bonus.to_string()})
-    df1 = pd.DataFrame(a.T,
-                  rows=('Họ và tên','HS1', 'BT01 Đúng/Sai', 'Điểm cộng'))
+    df1 = pd.DataFrame(a,
+                       rows=('Họ và tên','HS1', 'BT01 Đúng/Sai', 'Điểm cộng'))
     st.table(df1)
     # "name": ["An", "Bình", "Châu", "Nam", "Mai"], 
 #     "grade": [7, 6, 5, 7, 9], 
