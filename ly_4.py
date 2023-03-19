@@ -12,14 +12,18 @@ if st.button('Kết quả'):
     BTDDS = df1['BT01 Đúng/Sai']
     BTMM = df1['BT02 Moment']
     Bonus = df1['Điểm cộng']
-    a = np.array([Names, HS1, BTDDS, BTMM, Bonus])
+    KTGK = df1['Điểm KTGK']
+    KTCK = df1['Điểm KTCK']
+    a = np.array([Names, HS1, BTDDS, BTMM, Bonus, KTGK, KTCK])
     df1 = pd.DataFrame(
         {
             "Họ và tên": a[0],
             "HS1": a[1],
             'BT01 Đúng/Sai': a[2],
             'BT02 Moment': a[3],
-            'Điểm cộng': a[4]
+            'Điểm cộng': a[4],
+            'Điểm KTGK': a[5],
+            'Điểm KTCK': a[6]
         }
     )
     hide_dataframe_row_index = """
